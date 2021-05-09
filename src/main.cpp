@@ -15,7 +15,8 @@
 // Preprocessor Directives
 
 //------------------------------------------
-// Star of program
+// Start of program
 int main() {
     std::cout << "Hello Cmake!" << std::endl;
 }
+//------------------------------------------
