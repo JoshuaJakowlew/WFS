@@ -47,3 +47,16 @@ if( sdl2-mixer_FOUND )
   # Additional Dependencies
   target_link_libraries(WFS PRIVATE SDL2::SDL2_mixer)
 endif()
+
+find_package(sdl2-image CONFIG REQUIRED)
+
+if( sdl2-image_FOUND )
+  # Additional Include Directories
+  include_directories( ${SDL2_INCLUDE_DIRS} )
+
+  # Additional Library Directories
+  link_directories( ${SDL2_LIB_DIR} )
+
+  # Additional Dependencies
+  target_link_libraries(WFS PRIVATE SDL2::SDL2_image)
+endif()
