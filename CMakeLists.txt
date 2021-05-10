@@ -9,10 +9,10 @@ set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-add_executable( WFS src/main.cpp src/window.cpp)
+add_executable( WFS main.cpp Engine/Window/window.cpp Engine/IO/keyboard.cpp Engine/Core/Core.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+    ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
