@@ -9,7 +9,7 @@ set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-add_executable( WFS src/main.cpp )
+add_executable( WFS src/main.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/inc
@@ -31,3 +31,4 @@ if( SDL2_FOUND )
   # Additional Dependencies
   target_link_libraries(WFS PRIVATE SDL2::SDL2 SDL2::SDL2main)
 endif()
+
