@@ -9,7 +9,7 @@ set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-add_executable( WFS src/main.cpp)
+add_executable( WFS src/main.cpp src/window.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/inc
@@ -32,3 +32,18 @@ if( SDL2_FOUND )
   target_link_libraries(WFS PRIVATE SDL2::SDL2 SDL2::SDL2main)
 endif()
 
+
+
+# Find Package
+find_package(sdl2-mixer CONFIG REQUIRED)
+
+if( sdl2-mixer_FOUND )
+  # Additional Include Directories
+  include_directories( ${SDL2_INCLUDE_DIRS} )
+
+  # Additional Library Directories
+  link_directories( ${SDL2_LIB_DIR} )
+
+  # Additional Dependencies
+  target_link_libraries(WFS PRIVATE SDL2::SDL2_mixer)
+endif()
