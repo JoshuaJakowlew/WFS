@@ -1,3 +1,3 @@
-C:/Users/kobri/source/repos/WFS/build/CMakeFiles/WFS.dir
-C:/Users/kobri/source/repos/WFS/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/kobri/source/repos/WFS/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/jakow/Documents/Programming/WFS/build/CMakeFiles/WFS.dir
+C:/Users/jakow/Documents/Programming/WFS/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/jakow/Documents/Programming/WFS/build/CMakeFiles/ZERO_CHECK.dir
