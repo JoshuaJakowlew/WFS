@@ -9,10 +9,10 @@ set(SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
-add_executable( WFS src/main.cpp )
+add_executable( WFS main.cpp Engine/Window/window.cpp Engine/IO/keyboard.cpp Engine/Core/Core.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/inc
+    ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
@@ -30,4 +30,33 @@ if( SDL2_FOUND )
 
   # Additional Dependencies
   target_link_libraries(WFS PRIVATE SDL2::SDL2 SDL2::SDL2main)
+endif()
+
+
+
+# Find Package
+find_package(sdl2-mixer CONFIG REQUIRED)
+
+if( sdl2-mixer_FOUND )
+  # Additional Include Directories
+  include_directories( ${SDL2_INCLUDE_DIRS} )
+
+  # Additional Library Directories
+  link_directories( ${SDL2_LIB_DIR} )
+
+  # Additional Dependencies
+  target_link_libraries(WFS PRIVATE SDL2::SDL2_mixer)
+endif()
+
+find_package(sdl2-image CONFIG REQUIRED)
+
+if( sdl2-image_FOUND )
+  # Additional Include Directories
+  include_directories( ${SDL2_INCLUDE_DIRS} )
+
+  # Additional Library Directories
+  link_directories( ${SDL2_LIB_DIR} )
+
+  # Additional Dependencies
+  target_link_libraries(WFS PRIVATE SDL2::SDL2_image)
 endif()
