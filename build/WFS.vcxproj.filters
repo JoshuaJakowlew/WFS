@@ -1,16 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\kobri\source\repos\WFS\src\main.cpp">
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\IO\Keyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Entity\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Audio\Audio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Physics\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\AI\AI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Render\Render.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Core\Core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Systems\Physics\MovementSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\kobri\source\repos\WFS\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\jakow\Documents\Programming\WFS\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{902BA4F4-FD46-3310-8BB5-EB8EE12B977B}</UniqueIdentifier>
+      <UniqueIdentifier>{ADD91668-324E-3C3F-96C7-F660E3DEEDA4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
