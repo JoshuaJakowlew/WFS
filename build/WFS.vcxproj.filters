@@ -22,7 +22,7 @@
     <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Render\Render.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Components\Core\Core.cpp">
+    <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Core\Core.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\jakow\Documents\Programming\WFS\Engine\Systems\Physics\MovementSystem.cpp">

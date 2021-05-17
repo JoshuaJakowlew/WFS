@@ -17,7 +17,7 @@ add_executable(${PROJECT_NAME}
                                         Engine/Components/Physics/Transform.cpp
                                         Engine/Components/AI/AI.cpp 
                                         Engine/Components/Render/Render.cpp 
-                                        Engine/Components/Core/Core.cpp 
+                                        Engine/Core/Core.cpp 
                                         Engine/Systems/Physics/MovementSystem.cpp  
 
                                         )

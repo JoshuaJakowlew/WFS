@@ -4,8 +4,8 @@
 // Joshua Jakowlew
 //------------------------------------------
 // Standard Library Including
+#include <array>
 #include <iostream>
-
 // Internal including
 
 //------------------------------------------
@@ -16,7 +16,8 @@
 #ifndef ENGINE_KEYBOARD_H
 #define ENGINE_KEYBOARD_H
 //------------------------------------------
-enum keycode
+
+enum class KeyCode
 {
     KEY_UNKNOWN = 0,
 
@@ -106,8 +107,8 @@ enum keycode
     KEY_DOWN = 81,
     KEY_UP = 82,
 
-    KEY_NUMLOCKCLEAR = 83,
-
+    KEY_NUMLOCKCLEAR = 83, /**< num lock on PC, clear on Mac keyboards
+                            */
     KEY_KP_DIVIDE = 84,
     KEY_KP_MULTIPLY = 85,
     KEY_KP_MINUS = 86,
@@ -159,7 +160,7 @@ enum keycode
     KEY_KP_COMMA = 133,
     KEY_KP_EQUALSAS400 = 134,
 
-    KEY_ALTERASE = 153,
+    KEY_ALTERASE = 153, /**< Erase-Eaze */
     KEY_SYSREQ = 154,
     KEY_CANCEL = 155,
     KEY_CLEAR = 156,
@@ -221,25 +222,50 @@ enum keycode
 
     KEY_LCTRL = 224,
     KEY_LSHIFT = 225,
-    KEY_LALT = 226,
-    KEY_LGUI = 227,
+    KEY_LALT = 226, /**< alt, option */
+    KEY_LGUI = 227, /**< windows, command (apple), meta */
     KEY_RCTRL = 228,
     KEY_RSHIFT = 229,
-    KEY_RALT = 230,
-    KEY_RGUI = 231,
+    KEY_RALT = 230, /**< alt gr, option */
+    KEY_RGUI = 231, /**< windows, command (apple), meta */
+
+    KEY_MODE = 257,
+
+    KEY_AUDIONEXT = 258,
+    KEY_AUDIOPREV = 259,
+    KEY_AUDIOSTOP = 260,
+    KEY_AUDIOPLAY = 261,
+    KEY_AUDIOMUTE = 262,
+    KEY_MEDIASELECT = 263,
+    KEY_WWW = 264,
+    KEY_MAIL = 265,
+    KEY_CALCULATOR = 266,
+    KEY_COMPUTER = 267,
+    KEY_AC_SEARCH = 268,
+    KEY_AC_HOME = 269,
+    KEY_AC_BACK = 270,
+    KEY_AC_FORWARD = 271,
+    KEY_AC_STOP = 272,
+    KEY_AC_REFRESH = 273,
+    KEY_AC_BOOKMARKS = 274,
+
+    Count = 275
 };
-//------------------------------------------
+
+enum class KeyState : uint8_t
+{
+    None,
+    KeyDown,
+    KeyUp,
+    Count
+};
+
 class Keyboard
 {
   public:
-    Keyboard();
-    ~Keyboard();
-
-    static bool key_pressed(keycode key);
-    
+    KeyState keyPressed(KeyState key) const noexcept;
 
   private:
-    static const Uint8 *m_keyboard_event;
+    std::array<KeyState, static_cast<std::size_t>(KeyCode::Count)> m_keyState{};
 };
-//------------------------------------------
-#endif ENGINE_KEYBOARD_H
+#endif

@@ -3,20 +3,28 @@
 // Sakhil Kuliev
 // Joshua Jakowlew
 //------------------------------------------
+// Preprocessor Directives
+#ifndef CORE_HPP
+#define CORE_HPP
+//------------------------------------------
 // Standard Library Including
 #include <iostream>
-
+#include <chrono>
 // Internal including
-#include <Engine/Components/IO/keyboard.hpp>
+
 //------------------------------------------
 // External Library including
 #include <SDL2/SDL.h>
 //------------------------------------------
-// Preprocessor Directives
-
-//------------------------------------------
-KeyState Keyboard::keyPressed(KeyState key) const noexcept
+class Core
 {
-    return m_keyState[static_cast<std::size_t>(key)];
-}
+public:
+    [[noreturn]] void start();
+private:
+    void readInput();
+    void update(float dt);
+    void render();
+};
+
+#endif // CORE_HPP
 //------------------------------------------
